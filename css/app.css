@@ -1,0 +1,31 @@
+body{
+  overflow: hidden;
+}
+.fig{
+  width: 5vw;
+  height: auto;
+}
+
+
+@keyframes rainEffect {
+    100% { transform: translate(0, 100vh) rotate(360deg); }
+    
+}
+
+@keyframes rotateEffect {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotateEffect 4s infinite linear;
+}
+
+.rain{
+  position: absolute;
+  animation: rainEffect 5s infinite linear;
+}
