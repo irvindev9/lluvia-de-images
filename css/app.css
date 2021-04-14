@@ -1,31 +1,69 @@
 body{
   overflow: hidden;
 }
+
+.container{
+  height: 100vh;
+  width: 100%;
+}
+
+.logo{
+  position: absolute;
+  width: 200px;
+  top: calc(50% - 60px/2);
+  left: calc(50vw - 200px/2);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .logo{
+    width: 400px;
+    top: calc(50% - 121px/2);
+    left: calc(50vw - 400px/2);
+  }
+}
+
+.logo-img{
+  width: 100%;
+  height: auto;
+}
+
 .fig{
   width: 5vw;
   height: auto;
 }
 
-
+/* animations */
 @keyframes rainEffect {
-    100% { transform: translate(0, 100vh) rotate(360deg); }
-    
+  100% { transform: translate(0, 100vh) rotate(360deg); }
 }
 
-@keyframes rotateEffect {
+@keyframes rainEffect2 {
+  100% { transform: translate(-5vh, 103vh) rotate(360deg); }
+}
+
+@keyframes logo1 {
   0% {
-    transform: rotate(0);
+    opacity: 1;
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0.5;
   }
 }
 
-.rotate {
-  animation: rotateEffect 4s infinite linear;
+
+.logo-animation1 {
+  -webkit-animation: logo1 5s infinite linear;
+  animation: logo1 5s infinite linear;
 }
 
-.rain{
+.rain1{
   position: absolute;
   animation: rainEffect 5s infinite linear;
+}
+
+.rain2{
+  position: absolute;
+  animation: rainEffect2 10s infinite alternate-reverse;
+  animation-delay: 5s;
 }
